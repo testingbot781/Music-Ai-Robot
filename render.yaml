@@ -1,0 +1,23 @@
+services:
+  - type: web
+    name: telegram-song-bot
+    env: node
+    startCommand: node src/bot.js
+    envVars:
+      - key: BOT_TOKEN
+        sync: false
+      - key: BOT_USERNAME
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: OWNER_USERNAME
+        sync: false
+      - key: CHANNEL_ID
+        sync: false
+      - key: YT_API_KEY
+        sync: false
+      - key: TELEGRAM_HASH
+        sync: false
+      - key: MONGO_URL
+        sync: false
+    plan: starter
